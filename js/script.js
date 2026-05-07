@@ -30,7 +30,7 @@ for(let i=0; i<35; i++){
 
 // FORMATO:
 // AÑO-MES-DÍA T HORA:MINUTO:SEGUNDO
-const fechaEvento = new Date("2026-05-10T00:00:00");
+const fechaEvento = new Date("2026-05-09T00:00:00");
 
 // =====================================
 // CONTADOR
