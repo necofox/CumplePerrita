@@ -26,7 +26,6 @@
 
 <audio
 id="musica"
-autoplay
 loop>
 
     <source src="audio/cumple2.mp3" type="audio/mpeg">
@@ -217,22 +216,32 @@ tabindex="-1">
 
 <script>
 
-// MUSICA
 const musica = document.getElementById("musica");
 
 // VELOCIDAD
 musica.playbackRate = 1.2;
 
-// INTENTAR REPRODUCIR AUTOMATICAMENTE
-window.addEventListener("load", () => {
+// FUNCION REPRODUCIR
+function iniciarMusica(){
 
     musica.play().catch(() => {
 
-        console.log("El navegador bloqueó el autoplay");
+        console.log("Autoplay bloqueado");
 
     });
 
-});
+}
+
+// INTENTAR AL CARGAR
+window.addEventListener("load", iniciarMusica);
+
+// SI EL NAVEGADOR BLOQUEA,
+// SE ACTIVA AL PRIMER CLICK
+document.body.addEventListener("click", () => {
+
+    iniciarMusica();
+
+}, { once:true });
 
 </script>
 
