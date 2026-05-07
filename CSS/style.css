@@ -1,0 +1,337 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* BODY */
+body{
+
+    min-height:100vh;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    background:linear-gradient(
+        135deg,
+        #ff9a9e,
+        #fad0c4,
+        #fbc2eb,
+        #a18cd1
+    );
+
+    background-size:400% 400%;
+
+    animation:fondo 12s ease infinite;
+
+    position:relative;
+}
+
+/* FONDO ANIMADO */
+@keyframes fondo{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+/* BURBUJAS */
+.burbuja{
+
+    position:absolute;
+
+    bottom:-100px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,0.2);
+
+    animation:subir linear infinite;
+}
+
+/* ANIMACION BURBUJAS */
+@keyframes subir{
+
+    0%{
+        transform:translateY(0);
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
+
+}
+
+/* TARJETA */
+.card-cumple{
+
+    background:rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:30px;
+
+    padding:40px;
+
+    margin:40px 0;
+
+    text-align:center;
+
+    color:white;
+
+    box-shadow:0 10px 40px rgba(0,0,0,0.2);
+
+    max-width:700px;
+
+    width:90%;
+}
+
+/* TITULO */
+.titulo{
+
+    font-size:3rem;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+    text-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* SUBTITULO */
+.subtitulo{
+
+    margin-bottom:25px;
+
+    font-size:1.1rem;
+
+    line-height:1.7;
+}
+
+/* FOTO PRINCIPAL */
+.foto{
+
+    width:240px;
+
+    height:240px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:6px solid rgba(255,255,255,0.6);
+
+    margin-bottom:25px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+
+    transition:0.4s;
+}
+
+.foto:hover{
+
+    transform:scale(1.05);
+}
+
+/* INFORMACION */
+.info{
+
+    font-size:1.1rem;
+
+    margin:12px 0;
+
+    line-height:1.7;
+}
+
+/* FOTO UBICACION */
+.foto-ubicacion{
+
+    width:300px;
+
+    height:200px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    margin-top:25px;
+
+    border:4px solid rgba(255,255,255,0.5);
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+
+    transition:0.4s;
+}
+
+.foto-ubicacion:hover{
+
+    transform:scale(1.05);
+}
+
+/* TEXTO UBICACION */
+.texto-ubicacion{
+
+    margin-top:10px;
+
+    font-size:0.95rem;
+
+    color:white;
+}
+
+/* CONTADOR */
+.contador{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-top:30px;
+}
+
+/* CUADROS CONTADOR */
+.tiempo{
+
+    background:rgba(255,255,255,0.2);
+
+    padding:15px;
+
+    border-radius:20px;
+
+    min-width:90px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* NUMEROS */
+.numero{
+
+    font-size:2rem;
+
+    font-weight:700;
+}
+
+/* TEXOS */
+.texto{
+
+    font-size:0.9rem;
+}
+
+/* BOTON */
+.btn-fiesta{
+
+    margin-top:30px;
+
+    padding:14px 35px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:white;
+
+    color:#ff4f8b;
+
+    font-weight:600;
+
+    transition:0.3s;
+}
+
+.btn-fiesta:hover{
+
+    background:#ff4f8b;
+
+    color:white;
+
+    transform:translateY(-3px);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    .titulo{
+        font-size:2.2rem;
+    }
+
+    .subtitulo{
+        font-size:1rem;
+    }
+
+    .foto{
+
+        width:190px;
+
+        height:190px;
+    }
+
+    .foto-ubicacion{
+
+        width:260px;
+
+        height:170px;
+    }
+
+    .contador{
+        gap:10px;
+    }
+
+    .tiempo{
+        min-width:75px;
+    }
+
+}
+
+/* ========================= */
+/* MODAL */
+/* ========================= */
+
+.modal-fiesta{
+
+    background:linear-gradient(
+        135deg,
+        #ff9a9e,
+        #fbc2eb,
+        #a18cd1
+    );
+
+    border:none;
+
+    border-radius:25px;
+
+    color:white;
+}
+
+/* FOTO MODAL */
+.foto-modal{
+
+    width:180px;
+
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:5px solid rgba(255,255,255,0.5);
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
